@@ -3,7 +3,7 @@
 import { notes } from "../data/data.js";
 
 export const getDataByPathParams = (req, res) => {
-  let filteredData = notes;
+  // let filteredData = notes;
 
   const { field, term } = req.params;
 
