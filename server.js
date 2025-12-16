@@ -1,6 +1,6 @@
 import express from "express";
 
-import { apiRouter } from "./routes/apiRoutes";
+import { apiRouter } from "./routes/apiRoutes.js";
 
 const PORT = 3500;
 

@@ -1,3 +1,5 @@
+// This one's good :)
+
 import { notes } from "../data/data.js";
 
 export const getDataByPathParams = (req, res) => {
@@ -5,7 +7,7 @@ export const getDataByPathParams = (req, res) => {
 
   const { field, term } = req.params;
 
-  const allowedFields = [""];
+  const allowedFields = ["category"];
 
   if (allowedFields.includes(field.toLowerCase())) {
     filteredData = filteredData.filter(
@@ -14,7 +16,8 @@ export const getDataByPathParams = (req, res) => {
     return res.json(filteredData);
   } else {
     return res.status(400).json({
-      message: "Search field not allowed. Please use only ",
+      message:
+        "Search field not allowed. Please use only `category` and `tags` ",
     });
   }
 };

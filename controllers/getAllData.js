@@ -1,4 +1,4 @@
-import { notes } from "../data/data";
+import { notes } from "../data/data.js";
 
 export const getAllData = (req, res) => {
   let filteredData = notes;
