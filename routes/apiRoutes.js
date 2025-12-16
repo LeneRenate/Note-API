@@ -1,6 +1,6 @@
 import express from "express";
-import { getAllData } from "../controller/getAllData";
-import { getDataByPathParams } from "../controller/getDataByPathParams";
+import { getAllData } from "../controllers/getAllData.js";
+import { getDataByPathParams } from "../controllers/getDataByPathParams.js";
 
 export const apiRouter = express.Router();
 
