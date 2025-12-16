@@ -19,11 +19,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
 .DS_Store
 Thumbs.db
 desktop.ini
-
 
 .vscode/
 .idea/
@@ -31,7 +29,6 @@ desktop.ini
 *.swo
 *~
 .vs/
-
 
 dist/
 build/
