@@ -16,8 +16,7 @@ export const getDataByPathParams = (req, res) => {
     return res.json(filteredData);
   } else {
     return res.status(400).json({
-      message:
-        "Search field not allowed. Please use only `category` and `tags` ",
+      message: "Search field not allowed. Please use only `category` ",
     });
   }
 };
