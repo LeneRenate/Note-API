@@ -6,6 +6,12 @@ const PORT = 3500;
 
 const app = express();
 
+// Parse JSON bodies
+app.use(express.json());
+
+// Serve index.html
+app.use(express.static("."));
+
 app.use(`/api`, apiRouter);
 
 app.use((req, res) => {
