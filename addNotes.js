@@ -18,6 +18,7 @@ form.addEventListener("submit", async (e) => {
     const response = await fetch("http://localhost:3500/api/notes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     });
 
     if (response.ok) {
