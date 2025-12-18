@@ -17,7 +17,6 @@ export const getAllData = async (req, res) => {
     );
   }
 
-  // Must be fixed
   if (content) {
     filteredData = filteredData.filter((note) =>
       note.content.toLowerCase().includes(content.toLowerCase())
