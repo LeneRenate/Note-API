@@ -12,8 +12,8 @@ apiRouter.get("/", getAllData);
 apiRouter.get("/:field/:term", getDataByPathParams);
 
 apiRouter.post("/notes", createNote);
-apiRouter.patch("/notes", updateNote);
-apiRouter.delete("/notes", deleteNote);
+apiRouter.patch("/notes/:id", updateNote);
+apiRouter.delete("/notes/:id", deleteNote);
 
 apiRouter.get("/newest", filterByNewest);
 apiRouter.get("/oldest", filterByOldest);

@@ -2,7 +2,13 @@ import { getDb } from "../database/connection.js";
 import { noteSchema } from "../schemas/note.schema.js";
 
 export const createNote = async (req, res) => {
-  const { value } = noteSchema.validate(req.body);
+  const { value, error } = noteSchema.validate(req.body);
+
+  if (error) {
+    return res.status(422).json({
+      message: error.message,
+    });
+  }
 
   const { title, content, category, tags } = value;
 

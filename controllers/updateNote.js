@@ -3,7 +3,13 @@ import { getDb } from "../database/connection.js";
 export const updateNote = async (req, res) => {
   const { id } = req.params;
 
-  const { value } = noteSchema.validate(req.body);
+  const { value, error } = noteSchema.validate(req.body);
+
+  if (error) {
+    return res.status(422).json({
+      message: error.message,
+    });
+  }
 
   const { title, content, category, tags } = value;
 
