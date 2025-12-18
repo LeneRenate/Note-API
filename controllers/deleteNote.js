@@ -1,4 +1,4 @@
-import { getDb } from "../database/connection";
+import { getDb } from "../database/connection.js";
 
 export const deleteNote = async (req, res) => {
   const { id } = req.params;

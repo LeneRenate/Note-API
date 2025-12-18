@@ -1,9 +1,12 @@
 import { getDb } from "../database/connection.js";
+import { noteSchema } from "../schemas/note.schema.js";
 
 export const createNote = async (req, res) => {
-  const { title, content, category, tags } = req.body;
+  const { value } = noteSchema.validate(req.body);
 
-  // Making sure the db gets all the onfo it needs (tags will be optional)
+  const { title, content, category, tags } = value;
+
+  // Making sure the db gets all the info it needs (tags will be optional)
   if (!title || !content || !category) {
     return res
       .status(400)

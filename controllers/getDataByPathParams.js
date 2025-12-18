@@ -1,9 +1,13 @@
 // This one's good :)
 
 import { notes } from "../data/data.js";
+import { getDb } from "../database/connection.js";
 
-export const getDataByPathParams = (req, res) => {
+export const getDataByPathParams = async (req, res) => {
   // let filteredData = notes;
+
+  const db = await getDb();
+  let filteredData = await db.all("SELECT * FROM notes");
 
   const { field, term } = req.params;
 

@@ -2,7 +2,10 @@ import { getDb } from "../database/connection.js";
 
 export const updateNote = async (req, res) => {
   const { id } = req.params;
-  const { title, content, category, tags } = req.body;
+
+  const { value } = noteSchema.validate(req.body);
+
+  const { title, content, category, tags } = value;
 
   const db = await getDb();
 
