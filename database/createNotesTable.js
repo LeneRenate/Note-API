@@ -2,7 +2,7 @@ import sqlite3 from "sqlite3";
 import { open } from "sqlite";
 import path from "node:path";
 
-async function createTable() {
+async function createNotesTable() {
   const db = await open({
     filename: path.join("database.db"),
     driver: sqlite3.Database,
@@ -19,7 +19,7 @@ async function createTable() {
 
     `);
   await db.close();
-  console.log("database created");
+  console.log("notes database created");
 }
 
-await createTable();
+await createNotesTable();

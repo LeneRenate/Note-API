@@ -1,3 +1,4 @@
+import ".env/config";
 import express from "express";
 
 import { apiRouter } from "./routes/apiRoutes.js";

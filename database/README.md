@@ -51,7 +51,7 @@
 
 ## Setup (Already Done)
 
-1. ✅ createtable.js - Creates the notes table
+1. ✅ createNotesTable.js - Creates the notes table
 2. ✅ seedData.js - Adds initial test data
 3. ✅ database.db - The actual database file
 
@@ -88,7 +88,7 @@ SQLite stores some fields differently:
 ## Quick Start
 
     # Create table
-    node database/createtable.js
+    node database/createNotesTable.js
 
     # Add test data (only runs once)
     node database/seedData.js
