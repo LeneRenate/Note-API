@@ -1,6 +1,7 @@
-import ".env/config";
+import "dotenv/config";
 import express from "express";
 
+import { authRouter } from "./routes/authRoutes.js";
 import { apiRouter } from "./routes/apiRoutes.js";
 
 const PORT = 3500;
@@ -13,6 +14,10 @@ app.use(express.json());
 // Serve index.html
 app.use(express.static("."));
 
+// Auth routes
+app.use("/v1/auth", authRouter);
+
+// API routes
 app.use(`/api`, apiRouter);
 
 app.use((req, res) => {

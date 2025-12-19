@@ -1,4 +1,5 @@
 import { getDb } from "../database/connection.js";
+import { noteSchema } from "../schemas/note.schema.js";
 
 export const updateNote = async (req, res) => {
   const { id } = req.params;
